@@ -15,7 +15,7 @@ export const HomeContainer = styled.section`
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         width: 150px;
     }
 
@@ -25,18 +25,23 @@ export const HomeContainer = styled.section`
     }
 
     .homeChangeMode button img {
-        width: 50px;
+        cursor: pointer;
+        width: 60px;
+    }
+
+    h1 {
+        font-size: 80px;
     }
 
     h2 {
         color: #555555;
-        font-size: 30px;
-        font-weight: 500;
+        font-size: 50px;
+        font-weight: 300;
     }
 
     h3 {
         color: #555555;
-        font-size: 20px;
+        font-size: 30px;
         font-weight: 300;
     }
 
@@ -44,7 +49,7 @@ export const HomeContainer = styled.section`
         display: flex;
         justify-content: space-around;
         margin-top: 20px;
-        width: 300px;
+        width: 350px;
     }
 
     .homeButtons button {
@@ -54,8 +59,9 @@ export const HomeContainer = styled.section`
         border-style: solid;
         border-width: 2px;
         color: white;
+        cursor: pointer;
         padding: 15px;
-        width: 120px;
+        width: 150px;
     }
 
     .homeButtons button:hover {
@@ -74,7 +80,7 @@ export const HomeContainer = styled.section`
     }
 
     .homeIcons a img {
-        margin-top: 20px;
+        margin-top: 30px;
         width: 30px;
     }
 `
