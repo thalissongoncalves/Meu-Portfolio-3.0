@@ -6,69 +6,20 @@ import light from '../../assets/White-mode.png';
 import en from '../../assets/en-us.png';
 import br from '../../assets/pt-br.png';
 import curriculo from '../../assets/Thálisson-G-Curriculo.pdf';
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 function Home() {
     const [isLightMode, setIsLightMode] = useState(true);
     const [isPtBrMode, setIsPtBrMode] = useState(true);
 
-    useEffect(() => {
-        const backgroundModeButton = document.querySelector("#backgroundModeButton");
-        const backgroundMode = document.querySelector("#backgroundMode");
-
-        const changeLanguageBtn = document.querySelector("#changeLanguageBtn");
-        const languageMode = document.querySelector("#languageMode");
-
-        const changeBackgroundMode = () => {
-            if (isLightMode === false) {
-                backgroundMode.className = "lightMode";
-                setTimeout(() => {
-                    backgroundMode.src = light;
-                }, 150)
-                setIsLightMode(true)
-            } else if (isLightMode === true) {
-                backgroundMode.className = "blackMode";
-                setTimeout(() => {
-                    backgroundMode.src = dark;
-                }, 150)
-                setIsLightMode(false)
-            }
-        };
-
-        const changeLanguageMode = () => {
-            if (isPtBrMode === false) {
-                languageMode.className = "pt-br";
-                setTimeout(() => {
-                    languageMode.src = br;
-                }, 150)
-                setIsPtBrMode(true)
-            } else if (isPtBrMode === true) {
-                languageMode.className = "en-us";
-                setTimeout(() => {
-                    languageMode.src = en;
-                }, 150)
-                setIsPtBrMode(false)
-            }
-        };
-        
-        backgroundModeButton.addEventListener('click', changeBackgroundMode);
-        changeLanguageBtn.addEventListener('click', changeLanguageMode);
-
-        // Função de limpeza para remover o ouvinte de evento quando o componente for desmontado
-        return () => {
-            backgroundModeButton.removeEventListener('click', changeBackgroundMode);
-            changeLanguageBtn.removeEventListener('click', changeLanguageMode);
-        };
-    }, [isLightMode, isPtBrMode]);
-
     return (
         <HomeContainer id="home">
             <div className="homeChangeMode">
-                <button type="button" id="backgroundModeButton">
-                    <img src={light} alt="Botão Light" id="backgroundMode" className="lightMode"/>
+                <button type="button" id="backgroundModeButton" onClick={() => setIsLightMode(!isLightMode)}>
+                    <img src={ isLightMode ? light : dark } alt="Botão Light" id="backgroundMode" className={ isLightMode ? 'lightMode' : 'blackMode' }/>
                 </button>
-                <button type="button" id="changeLanguageBtn">
-                    <img src={br} alt="Botão Pt-Br" id="languageMode" className="pt-br"/>
+                <button type="button" id="changeLanguageBtn" onClick={() => setIsPtBrMode(!isLightMode)}>
+                    <img src={ isPtBrMode ? br : en } alt="Botão Pt-Br" id="languageMode" className={ isPtBrMode ? 'pt-br' : 'en-us' }/>
                 </button>
             </div>
             <h3>Olá, eu sou</h3>

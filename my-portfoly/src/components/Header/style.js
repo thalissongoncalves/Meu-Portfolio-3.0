@@ -2,13 +2,18 @@ import styled from 'styled-components';
 
 export const HeaderContainer = styled.header`
     align-items: center;
+    background-color: #ffffff;
     display: flex;
     flex-direction: row;
     font-family: 'Inter';
     font-size: 14px;
     height: 5rem;
     justify-content: space-around;
+    left: 0;
+    position: fixed;
+    top: 0;
     width: 100%;
+    z-index: 1000;
 
     p {
         font-size: 20px;
@@ -28,16 +33,12 @@ export const HeaderContainer = styled.header`
         width: 400px;
     }
 
-    nav ul li a {
-        color: black;
-        text-decoration: none;
-    }
-
     nav ul li {
-        transition: transform 0.5s;
+        cursor: pointer;
+        transition: transform 0.3s ease;
     }
 
     nav ul li:hover {
-        transform: scale(1.1);
+        transform: translateY(-2px);
     }
 `

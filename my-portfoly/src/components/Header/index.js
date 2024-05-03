@@ -4,6 +4,7 @@ import light from '../../assets/White-mode.png';
 import en from '../../assets/en-us.png';
 import br from '../../assets/pt-br.png';
 import { useEffect, useState } from "react";
+import { Link } from 'react-scroll';
 
 function Header() {
   const [isLightMode, setIsLightMode] = useState(true);
@@ -60,13 +61,13 @@ function Header() {
 
     return (
       <HeaderContainer>
-        <p>Thálisson Gonçalves</p>
+        <p><Link to="home" smooth={true} duration={1000}>Thálisson Gonçalves</Link></p>
         <nav>
           <ul>
-            <li><a href="#">Sobre</a></li>
-            <li><a href="#">Habilidades</a></li>
-            <li><a href="#">Projetos</a></li>
-            <li><a href="#">Contato</a></li>
+            <li><Link to="about" smooth={true} duration={1000}>Sobre</Link></li>
+            <li><Link to="about" smooth={true} duration={1000}>Habilidades</Link></li>
+            <li><Link to="about" smooth={true} duration={1000}>Projetos</Link></li>
+            <li><Link to="about" smooth={true} duration={1000}>Contato</Link></li>
           </ul>
           
         </nav>

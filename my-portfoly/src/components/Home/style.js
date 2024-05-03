@@ -7,7 +7,7 @@ export const HomeContainer = styled.section`
     font-family: Inter;
     font-size: 30px;
     font-weight: 500;
-    height: 32rem;
+    height: 47rem;
     justify-content: center;
     width: 100%;
 
@@ -61,6 +61,7 @@ export const HomeContainer = styled.section`
         color: white;
         cursor: pointer;
         padding: 15px;
+        transition: background-color 0.3s ease, color 0.3s ease;
         width: 150px;
     }
 
