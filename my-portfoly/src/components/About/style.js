@@ -31,7 +31,7 @@ export const AboutContainer = styled.section`
     .cardOne {
         border: none;
         border-radius: 25px;
-        height: 20em;
+        height: 30em;
         overflow: hidden;
         width: 18em;
     }
@@ -54,7 +54,7 @@ export const AboutContainer = styled.section`
         justify-content: space-evenly;
         border: 1px solid black;
         border-radius: 25px;
-        height: 20em;
+        height: 27em;
         overflow: hidden;
         width: 18em;
     }
@@ -119,7 +119,7 @@ export const AboutContainer = styled.section`
         border-radius: 25px;
         display: flex;
         flex-direction: column;
-        height: 20em;
+        height: 27em;
         justify-content: center;
         width: 18em;
     }
@@ -164,14 +164,17 @@ export const AboutContainer = styled.section`
     }
 
     .cardDescription {
-        border: 1px solid black;
+        border-right: 1px solid black;
+        border-left: 1px solid black;
+        border-bottom: 1px solid black;
         border-radius: 25px;
+        display: none;
         font-size: 14px;
         font-weight: 400;
-        height: 10em;
-        margin-top: 25px;
-        padding: 20px;
-        text-align: center;
-        width: 76%;
+        margin-top: -25px;
+        padding-top: 30px;
+        padding-bottom: 20px;
+        padding-right: 20px;
+        padding-left: 20px;
     }
 `
