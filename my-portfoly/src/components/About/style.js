@@ -6,7 +6,7 @@ export const AboutContainer = styled.section`
     flex-direction: column;
     font-family: Inter;
     font-weight: 400;
-    height: 47rem;
+    height: 80vh;
     justify-content: center;
     width: 100%;
 
@@ -22,16 +22,16 @@ export const AboutContainer = styled.section`
     .cardsAboutMe {
         display: flex;
         flex-direction: row;
-        heigth: 400px;
         justify-content: space-around;
         margin-top: 10px;
+        margin-bottom: 50px;
         width: 90%;
     }
 
     .cardOne {
         border: none;
         border-radius: 25px;
-        height: 30em;
+        height: 70vh;
         overflow: hidden;
         width: 18em;
     }
@@ -42,7 +42,6 @@ export const AboutContainer = styled.section`
     }
 
     .cardOne img:hover {
-        cursor: pointer;
         opacity: 0.99;
         transform: scale(1.05);
     }
@@ -54,7 +53,7 @@ export const AboutContainer = styled.section`
         justify-content: space-evenly;
         border: 1px solid black;
         border-radius: 25px;
-        height: 27em;
+        height: 70vh;
         overflow: hidden;
         width: 18em;
     }
@@ -95,7 +94,6 @@ export const AboutContainer = styled.section`
         border-style: solid;
         border-width: 2px;
         color: white;
-        cursor: pointer;
         padding: 5px;
         transition: background-color 0.3s ease, color 0.3s ease;
         width: 150px;
@@ -119,7 +117,7 @@ export const AboutContainer = styled.section`
         border-radius: 25px;
         display: flex;
         flex-direction: column;
-        height: 27em;
+        height: 70vh;
         justify-content: center;
         width: 18em;
     }

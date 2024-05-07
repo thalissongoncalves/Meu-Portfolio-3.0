@@ -7,27 +7,25 @@ import pointerCursor from './assets/black-cursor-clique.png';
 
 const App = () => {
   useEffect(() => {
-    // Adicionar cursor personalizado padrão
-    document.body.style.cursor = `url(${blackCursor}), auto`;
-    
-    // Adicionar event listeners para os elementos que devem ter cursor personalizado
     const pointerElements = document.querySelectorAll('.custom-cursor');
+
+    const handleMouseEnter = () => {
+      document.body.style.cursor = `url(${pointerCursor}), auto`;
+    };
+
+    const handleMouseLeave = () => {
+      document.body.style.cursor = `url(${blackCursor}), auto`;
+    };
+
     pointerElements.forEach(element => {
-      element.addEventListener('mouseenter', () => {
-        // Mudar o cursor para o cursor de ponteiro personalizado
-        document.body.style.cursor = `url(${pointerCursor}), auto`;
-      });
-      element.addEventListener('mouseleave', () => {
-        // Voltar ao cursor personalizado padrão
-        document.body.style.cursor = `url(${blackCursor}), auto`;
-      });
+      element.addEventListener('mouseenter', handleMouseEnter);
+      element.addEventListener('mouseleave', handleMouseLeave);
     });
 
-    // Limpar event listeners quando o componente for desmontado
     return () => {
       pointerElements.forEach(element => {
-        element.removeEventListener('mouseenter');
-        element.removeEventListener('mouseleave');
+        element.removeEventListener('mouseenter', handleMouseEnter);
+        element.removeEventListener('mouseleave', handleMouseLeave);
       });
     };
   }, []);

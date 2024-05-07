@@ -2,35 +2,24 @@ import styled from 'styled-components';
 
 export const HeaderContainer = styled.header`
     align-items: center;
-    background-color: #ffffff;
+    background-color: white;
+    border-bottom: 1px dotted black;
     display: flex;
-    flex-direction: row;
     font-family: 'Inter';
     font-size: 14px;
-    height: 5rem;
-    justify-content: space-around;
-    left: 0;
+    height: 10vh;
+    justify-content: center;
     position: fixed;
-    top: 0;
     width: 100%;
-    z-index: 1000;
-
-    p {
-        font-size: 20px;
-        font-weight: 400;
-    }
-
-    p:hover {
-        cursor: pointer;
-    }
 
     nav ul {
         display: flex;
         flex-direction: row;
-        font-size: 15px;
+        font-size: 16px;
+        font-weight: 500;
         justify-content: space-around;
         list-style-type: none;
-        width: 400px;
+        width: 500px;
     }
 
     nav ul li {

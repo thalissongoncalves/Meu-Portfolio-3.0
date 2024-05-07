@@ -5,13 +5,13 @@ export const HomeContainer = styled.section`
     display: flex;
     flex-direction: column;
     font-family: Inter;
-    font-size: 30px;
     font-weight: 500;
-    height: 47rem;
+    height: 85vh;
     justify-content: center;
     width: 100%;
 
     .homeChangeMode {
+        align-items: center;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
@@ -25,24 +25,23 @@ export const HomeContainer = styled.section`
     }
 
     .homeChangeMode button img {
-        cursor: pointer;
-        width: 60px;
+        width: 50px;
     }
 
     h1 {
-        font-size: 80px;
+        font-size: 3rem;
     }
 
     h2 {
         color: #555555;
-        font-size: 50px;
-        font-weight: 300;
+        font-size: 1.8rem;
+        font-weight: 200;
     }
 
     h3 {
         color: #555555;
-        font-size: 30px;
-        font-weight: 300;
+        font-size: 1.3rem;
+        font-weight: 200;
     }
 
     .homeButtons {
@@ -59,7 +58,6 @@ export const HomeContainer = styled.section`
         border-style: solid;
         border-width: 2px;
         color: white;
-        cursor: pointer;
         padding: 15px;
         transition: background-color 0.3s ease, color 0.3s ease;
         width: 150px;
@@ -77,7 +75,7 @@ export const HomeContainer = styled.section`
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        width: 100px;
+        width: 80px;
     }
 
     .homeIcons a img {
